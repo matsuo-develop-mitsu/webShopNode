@@ -1,0 +1,76 @@
+<mxfile host="65bd71144e">
+    <diagram id="0TR83F8rX_OxBh3qzH_I" name="ログイン画面と一覧画面">
+        <mxGraphModel dx="983" dy="1133" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="1">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="80" width="500" height="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="サインイン" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="120" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="185" y="260" width="370" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="メールアドレス" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;labelPosition=center;verticalLabelPosition=middle;" vertex="1" parent="1">
+                    <mxGeometry x="185" y="220" width="115" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="185" y="360" width="370" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="パスワード" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;labelPosition=center;verticalLabelPosition=middle;" vertex="1" parent="1">
+                    <mxGeometry x="185" y="320" width="85" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="サインイン" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="185" y="440" width="375" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="アカウントの作成" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=4" vertex="1" parent="1">
+                    <mxGeometry x="185" y="550" width="135" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="790" y="30" width="700" height="700" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="商品一覧" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="830" y="150" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="830" y="220" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="1030" y="220" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="1230" y="220" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="830" y="420" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="1035" y="420" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="1230" y="420" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="カートの中" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="1210" y="89" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="商品一覧" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="1350" y="89" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="ようこそ〇〇さん" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="820" y="99" width="230" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="ログアウト" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=4" vertex="1" parent="1">
+                    <mxGeometry x="830" y="50" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="endArrow=classic;html=1;fontSize=15;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.46;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2" target="13">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="970" y="450" as="sourcePoint"/>
+                        <mxPoint x="1020" y="400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
