@@ -11,25 +11,7 @@ router.get("/", (request, response) => {
 });
 
 // ログインのルーティング
-router.post("/login", (request, response) => {
-  let loginUser;
-  request.on("data", (chunk) => {
-    loginUser = "";
-    loginUser += chunk;
-  });
-  request.on("end", () => {
-    loginUser = qs.parse(loginUser);
-    userController
-      .doGetLoginUser(loginUser.email, loginUser.password)
-      .then((data) => {
-        if (data) {
-          response.redirect("/list");
-        } else {
-          response.redirect("/");
-        }
-      });
-  });
-});
+router.post("/login", userController.doGetLoginUser);
 
 // ログイン後のルーティング
 router.get("/list", (request, response) => {
