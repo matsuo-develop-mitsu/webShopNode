@@ -6,17 +6,28 @@ var userController = require("../controller/UserController");
 // 初期ページのルーティング
 router.get("/", (request, response) => {
   response.render("index.ejs", {
-    title: "ショッピングページ",
+    title: "トップページ",
   });
 });
 
 // ログインのルーティング
 router.post("/login", userController.doGetLoginUser);
 
-// ログイン後のルーティング
+// 一覧画面のルーティング
 router.get("/list", (request, response) => {
   response.render("list.ejs", {
-    title: "List画面",
+    title: "一覧画面",
   });
 });
+
+// アカウント作成画面へのルーティング
+router.get("/regist", (request, response) => {
+  response.render("register.ejs", {
+    title: "登録画面",
+  });
+});
+
+// アカウント作成のルーティング
+router.post("/regist", userController.doRegistUser);
+
 module.exports = router;

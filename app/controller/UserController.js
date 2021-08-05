@@ -20,4 +20,28 @@ module.exports = {
       });
     });
   },
+  doRegistUser: function (request, response) {
+    let registerUser;
+
+    request.on("data", (chunk) => {
+      registerUser = "";
+      registerUser += chunk;
+    });
+
+    request.on("end", () => {
+      registerUser = qs.parse(registerUser);
+
+      User.registUser(
+        registerUser.name,
+        registerUser.mail,
+        registerUser.password
+      ).then((data) => {
+        if (data) {
+          response.redirect("/list");
+        } else {
+          response.redirect("/");
+        }
+      });
+    });
+  },
 };

@@ -28,4 +28,18 @@ module.exports = {
       });
     return result;
   },
+  registUser: async function (name, email, password) {
+    let result = false;
+    const connection = mysql.createConnection(dbConfig);
+    await connection
+      .promise()
+      .query(
+        `INSERT INTO ${userTable}(name, mail, password) VALUES (?, ?, ?)`,
+        [name, email, password]
+      )
+      .then((data) => {
+        result = true;
+      });
+    return result;
+  },
 };
