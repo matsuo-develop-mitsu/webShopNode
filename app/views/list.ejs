@@ -4,29 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
     <title>List</title>
-
-    <style>
-      .tile {
-        height: 100px;
-        width: 33%;
-        background-color: black;
-        color: black;
-      }
-    </style>
   </head>
+
   <header><%- include('common/header'); %></header>
   <body>
-    <div>Listの画面です</div>
-
-    <table width="800px" height="1000px">
-      <tbody>
+    <% if (items.length) { %>
+    <table class="table">
+      <thead>
         <tr>
-          <td class="tile"></td>
-          <td class="tile"></td>
-          <td class="tile"></td>
+          <th>商品名</th>
+          <th>商品画像</th>
+          <th>値段</th>
         </tr>
+      </thead>
+      <tbody>
+        <% items.forEach((item) => {%>
+        <tr>
+          <td><%= item.name %></td>
+          <td><img src="../images/<%= item.imageName%>" alt="" /></td>
+          <td><%= item.price %></td>
+        </tr>
+        <% }) %>
       </tbody>
     </table>
+    <% } else { %>
+    <div>表示できる商品がありません</div>
+    <% } %>
   </body>
 </html>

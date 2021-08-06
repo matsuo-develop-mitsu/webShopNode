@@ -22,6 +22,7 @@ module.exports = {
         console.log(error.message);
       })
       .finally(() => {
+        // DB接続を終了させる
         if (connection) {
           connection.end();
         }

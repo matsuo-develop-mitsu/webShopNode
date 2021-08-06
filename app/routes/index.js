@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const qs = require("querystring");
-var userController = require("../controller/UserController");
+const userController = require("../controller/UserController");
+const itemController = require("../controller/ItemController");
 
 // 初期ページのルーティング
 router.get("/", (request, response) => {
@@ -12,13 +13,8 @@ router.get("/", (request, response) => {
 
 // ログインのルーティング
 router.post("/login", userController.doGetLoginUser);
-
 // 一覧画面のルーティング
-router.get("/list", (request, response) => {
-  response.render("list.ejs", {
-    title: "一覧画面",
-  });
-});
+router.get("/list", itemController.doGetAllItems);
 
 // アカウント作成画面へのルーティング
 router.get("/regist", (request, response) => {
