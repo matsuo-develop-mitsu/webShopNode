@@ -12,3 +12,11 @@
 .menu-item {
   display: inline-block;
 }
+
+/* 一覧画面のcss */
+.dispImage {
+  float: left;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+}

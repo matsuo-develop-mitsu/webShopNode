@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../stylesheets/index.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,26 +16,9 @@
 
   <header><%- include('common/header'); %></header>
   <body>
-    <% if (items.length) { %>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>商品名</th>
-          <th>商品画像</th>
-          <th>値段</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% items.forEach((item) => {%>
-        <tr>
-          <td><%= item.name %></td>
-          <td><img src="../images/<%= item.imageName%>" alt="" /></td>
-          <td><%= item.price %></td>
-        </tr>
-        <% }) %>
-      </tbody>
-    </table>
-    <% } else { %>
+    <% if (items.length) { %> <% items.forEach((item) => {%>
+    <img class="dispImage" src="../images/<%= item.imageName%>" alt="" />
+    <%})%> <% } else { %>
     <div>表示できる商品がありません</div>
     <% } %>
   </body>
