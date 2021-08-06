@@ -14,7 +14,7 @@ module.exports = {
         password,
       ])
       .then((data) => {
-        if (data) {
+        if (data[userDataIndex].length) {
           result = data[userDataIndex];
         }
       })
@@ -31,6 +31,10 @@ module.exports = {
   registUser: async function (name, email, password) {
     let result = false;
     const connection = mysql.createConnection(dbConfig);
+
+    if ([name, email, password].indexOf(null)) {
+      return result;
+    }
     await connection
       .promise()
       .query(
