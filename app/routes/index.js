@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const qs = require("querystring");
 const userController = require("../controller/UserController");
 const itemController = require("../controller/ItemController");
 
@@ -15,15 +14,17 @@ router.get("/", (request, response) => {
 router.post("/login", userController.doGetLoginUser);
 // 一覧画面のルーティング
 router.get("/list", itemController.doGetAllItems);
-
 // アカウント作成画面へのルーティング
 router.get("/regist", (request, response) => {
   response.render("register.ejs", {
     title: "登録画面",
   });
 });
-
 // アカウント作成のルーティング
 router.post("/regist", userController.doRegistUser);
+router.get("/logout", (request, response) => {
+  console.log("ログアウトをしました");
+  response.redirect("/");
+});
 
 module.exports = router;
