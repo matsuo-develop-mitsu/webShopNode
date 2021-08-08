@@ -5,6 +5,10 @@ module.exports = {
     Item.getAllItems().then((data) => {
       response.render("list.ejs", {
         items: data,
+        session: {
+          name: "ログインユーザー",
+          id: "1",
+        },
       });
     });
   },

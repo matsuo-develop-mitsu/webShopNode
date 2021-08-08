@@ -14,7 +14,7 @@
     <title>List</title>
   </head>
 
-  <header><%- include('common/header'); %></header>
+  <header><%- include('common/header', { loginUser: session}); %></header>
   <body>
     <% if (items.length) { %> <% items.forEach((item) => {%>
     <img class="dispImage" src="../images/<%= item.imageName%>" alt="" />
