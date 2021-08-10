@@ -1,7 +1,17 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const session = require("express-session");
 
+// セッションオブジェクトを初期化する
+app.use(
+  session({
+    secret: "secretCode",
+    resave: false,
+    saveUninitialized: true,
+    cookie: { maxAge: 6000 },
+  })
+);
 // 画面のパス
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
