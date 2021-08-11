@@ -29,5 +29,7 @@ router.get("/logout", (request, response) => {
 
 // 商品詳細画面へのルーティング
 router.get("/list/:id", itemController.doGetOneItem);
+// カートにアイテムを入れる処理
+router.post("/addCart", itemController.addCartItem);
 
 module.exports = router;

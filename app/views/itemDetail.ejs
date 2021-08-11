@@ -19,10 +19,21 @@
   <body>
     <div>
       <img class="dispImage" src="../images/<%= item.imageName%>" alt="" />
+      <div>
+        <span>詳細内容</span>
+      </div>
       <span class="itemDetail"><%= item.detail%></span>
     </div>
+    <form action="/addCart" method="POST">
     <div>
-      <input type="text" />
+      <select name="" id="">
+        <% for(let i = 0; i <= item.price; i++) { %>
+        <option value="buyItemNum"><%= i %></option>
+        <% } %></select
+      >個
+      <button type="submit" class="btn btn-primary">購入する</button>
+      </div>
+      </form>
     </div>
   </body>
 </html>
