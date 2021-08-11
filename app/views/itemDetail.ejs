@@ -15,13 +15,14 @@
   </head>
 
   <header><%- include('common/header', { loginUser: session}); %></header>
+
   <body>
-    <% if (items.length) { %> <% items.forEach((item) => {%>
-    <a href="/list/<%= item.id%> "
-      ><img class="dispImage" src="../images/<%= item.imageName%>" alt=""
-    /></a>
-    <%})%> <% } else { %>
-    <div>表示できる商品がありません</div>
-    <% } %>
+    <div>
+      <img class="dispImage" src="../images/<%= item.imageName%>" alt="" />
+      <span class="itemDetail"><%= item.detail%></span>
+    </div>
+    <div>
+      <input type="text" />
+    </div>
   </body>
 </html>

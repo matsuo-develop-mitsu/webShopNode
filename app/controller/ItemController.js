@@ -1,4 +1,5 @@
 const Item = require("../module/Item");
+const url = require("url");
 
 module.exports = {
   doGetAllItems: async function (request, response) {
@@ -11,5 +12,22 @@ module.exports = {
         },
       });
     });
+  },
+  doGetOneItem: async function (request, response) {
+    const parsseUrl = url.parse(request.url, true);
+    let itemId = parsseUrl.href.replace("/list/", "");
+    Item.getItemDetail(itemId)
+      .then((data) => {
+        response.render("itemDetail.ejs", {
+          session: {
+            name: request.session.userName,
+            id: request.session.userId,
+          },
+          item: data,
+        });
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   },
 };
