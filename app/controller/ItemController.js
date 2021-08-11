@@ -6,8 +6,8 @@ module.exports = {
       response.render("list.ejs", {
         items: data,
         session: {
-          name: "ログインユーザー",
-          id: "1",
+          name: request.session.userName,
+          id: request.session.userId,
         },
       });
     });

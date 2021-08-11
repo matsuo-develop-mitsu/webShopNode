@@ -27,7 +27,7 @@ module.exports = {
           connection.end();
         }
       });
-    return result;
+    return result[userDataIndex];
   },
   registUser: async function (name, email, password) {
     let result = false;

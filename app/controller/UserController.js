@@ -18,7 +18,13 @@ module.exports = {
         User.getLoginUser(loginUser.email, loginUser.password).then(
           (result) => {
             // メールアドレスとパスワードがDBに登録されているユーザーと一致すれば、リスト画面に飛ぶ
-            result ? response.redirect("/list") : response.redirect("/");
+            if (result) {
+              request.session.userName = result.name;
+              request.session.userId = result.id;
+              response.redirect("/list");
+            } else {
+              response.redirect("/");
+            }
           }
         );
       }
