@@ -30,4 +30,8 @@ module.exports = {
         console.log(error.message);
       });
   },
+  addCartItem: function (request, response) {
+    console.log("アイテムをカートに登録しました");
+    response.redirect("/list");
+  },
 };
