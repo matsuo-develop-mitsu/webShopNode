@@ -12,6 +12,7 @@ app.use(
     cookie: { maxAge: 6000 },
   })
 );
+
 // 画面のパス
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");

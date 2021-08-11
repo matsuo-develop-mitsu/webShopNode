@@ -27,4 +27,7 @@ router.get("/logout", (request, response) => {
   response.redirect("/");
 });
 
+// 商品詳細画面へのルーティング
+router.get("/list/:id", itemController.doGetOneItem);
+
 module.exports = router;
