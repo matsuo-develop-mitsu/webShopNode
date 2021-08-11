@@ -43,13 +43,17 @@ module.exports = {
 
       User.registUser(
         registerUser.name,
-        registerUser.mail,
+        registerUser.email,
         registerUser.password
       ).then((data) => {
         if (data) {
-          response.redirect("/list");
-        } else {
+          console.log("登録に成功しました");
           response.redirect("/");
+        } else {
+          console.log("登録に失敗しました");
+          response.render("register.ejs", {
+            title: "登録画面",
+          });
         }
       });
     });

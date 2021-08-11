@@ -33,7 +33,7 @@ module.exports = {
     let result = false;
     const connection = mysql.createConnection(dbConfig);
 
-    if ([name, email, password].indexOf(null)) {
+    if ([name, email, password].indexOf(null) !== -1) {
       return result;
     }
     await connection
@@ -44,6 +44,15 @@ module.exports = {
       )
       .then((data) => {
         result = true;
+      })
+      .catch((error) => {
+        console.log(error.message);
+      })
+      .finally(() => {
+        // DB接続を終了させる
+        if (connection) {
+          connection.end();
+        }
       });
     return result;
   },
