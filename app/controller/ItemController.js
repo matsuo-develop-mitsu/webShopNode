@@ -34,4 +34,12 @@ module.exports = {
     console.log("アイテムをカートに登録しました");
     response.redirect("/list");
   },
+  doOpenCart: async function (request, response) {
+    response.render("cart.ejs", {
+      session: {
+        name: request.session.userName,
+        id: request.session.userId,
+      },
+    });
+  },
 };

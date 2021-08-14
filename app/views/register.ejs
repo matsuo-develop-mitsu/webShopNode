@@ -25,6 +25,7 @@
             name="name"
             class="form-control"
             placeholder="ユーザー名"
+            id="inputUserName"
           />
         </div>
         <div class="form-group">
@@ -46,9 +47,29 @@
             placeholder="Password"
           />
         </div>
-        <button type="submit" class="btn btn-primary">登録する</button>
+        <div>
+          <button
+            id="registerButton"
+            type="submit"
+            class="btn btn-primary"
+            disabled
+          >
+            登録する
+          </button>
+          <a class="btn btn-primary" href="/">トップページ</a>
+        </div>
       </form>
-      <a class="btn btn-primary" href="/">トップページ</a>
     </div>
   </body>
 </html>
+<script>
+  const inputUserNameEl = document.getElementById("inputUserName");
+  const registerButtonEl = document.getElementById("registerButton");
+  inputUserNameEl.addEventListener("keyup", (e) => {
+    if (e.target.value.length >= 8) {
+      registerButtonEl.disabled = false;
+    } else {
+      registerButtonEl.disabled = true;
+    }
+  });
+</script>

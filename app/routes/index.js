@@ -14,6 +14,7 @@ router.get("/", (request, response) => {
 router.post("/login", userController.doGetLoginUser);
 // 一覧画面のルーティング
 router.get("/list", itemController.doGetAllItems);
+router.post("/list", itemController.doGetAllItems);
 // アカウント作成画面へのルーティング
 router.get("/regist", (request, response) => {
   response.render("register.ejs", {
@@ -31,5 +32,6 @@ router.get("/logout", (request, response) => {
 router.get("/list/:id", itemController.doGetOneItem);
 // カートにアイテムを入れる処理
 router.post("/addCart", itemController.addCartItem);
-
+// カートの画面へのルーティング
+router.get("/cartItems", itemController.doOpenCart);
 module.exports = router;
